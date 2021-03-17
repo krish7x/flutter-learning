@@ -9,17 +9,52 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.purple,
         body: SafeArea(
-          child: Container(
-            height: 150.0,
-            width: 100.0,
-            margin: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0),
-            padding: EdgeInsets.all(25.0),
-            child: Text("hey"),
-            color: Colors.white,
-          ),
-        ),
+            child: Column(
+          mainAxisSize: MainAxisSize.max,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround, //vertical [natural direction]
+          crossAxisAlignment:
+              CrossAxisAlignment.center, //horizontal since it is column
+          children: <Widget>[
+            Container(
+              height: 100.0,
+              width: 100.0,
+              // margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(left: 27.0, top: 5.0),
+              color: Colors.white,
+              child: Text(
+                "One",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Container(
+              height: 100.0,
+              width: 100.0,
+              // margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(left: 25.0, top: 5.0),
+              color: Colors.white,
+              child: Text("Two"),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Container(
+              height: 100.0,
+              width: 100.0,
+              // margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(left: 25.0, top: 5.0),
+              color: Colors.white,
+              child: Text("Three"),
+            ),
+          ],
+        )),
       ),
       debugShowCheckedModeBanner: false,
     );
