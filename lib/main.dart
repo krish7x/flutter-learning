@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,36 +10,81 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white10,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.black12,
+                backgroundImage: AssetImage('images/krish.jpg'),
               ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.yellow,
+              Text(
+                'Krish',
+                style: TextStyle(
+                  fontFamily: 'DancingScript',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'Software Developer',
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  wordSpacing: 2.0,
+                  fontSize: 20.0,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white70,
+                ),
+              ),
+              SizedBox(
+                child: Divider(
+                  color: Colors.teal.shade100,
+                  thickness: 0.5,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                color: Colors.white,
+                shadowColor: Colors.white70,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 35.0,
+                    color: Colors.teal,
                   ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.green,
+                  title: Text(
+                    '+91 7448629677',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18.0,
+                        fontFamily: 'Roboto',
+                        color: Colors.teal[900]),
                   ),
-                ],
+                ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.purple,
-              ),
+              Card(
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20.0),
+                  color: Colors.white,
+                  shadowColor: Colors.white70,
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      size: 35.0,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'krish7x@gmail.com',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18.0,
+                          fontFamily: 'Roboto',
+                          color: Colors.teal[900]),
+                    ),
+                  )),
             ],
           ),
         ),
