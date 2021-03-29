@@ -15,12 +15,10 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:
-    - images/krish.jpg
-
+    - images
   fonts:
     - family: DancingScript
       fonts:
@@ -29,5 +27,3 @@ flutter:
     - family: Roboto
       fonts:
         - asset: fonts/Roboto-Regular.ttf
-
-
